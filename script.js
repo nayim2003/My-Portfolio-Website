@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementById("navLinks");
   const currentYear = document.getElementById("currentYear");
 
-  // Automatic copyright year
+  // Automatically update the copyright year
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
   }
@@ -29,17 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
 
+    // Close menu after clicking a navigation link
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", closeMenu);
     });
 
+    // Close menu with Escape
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         closeMenu();
-        navToggle.focus();
       }
     });
 
+    // Close menu when clicking outside
     document.addEventListener("click", (event) => {
       if (
         navLinks.classList.contains("is-open") &&
@@ -50,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    // Close mobile menu on desktop resize
     window.addEventListener("resize", () => {
       if (window.innerWidth > 760) {
         closeMenu();
@@ -57,14 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Highlight the current section in navigation
+  // Highlight the active navigation link
   const sections = document.querySelectorAll("main section[id]");
   const sectionLinks = document.querySelectorAll(
     '.nav-links a[href^="#"]'
   );
 
   if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
+    const sectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
@@ -73,11 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const isCurrent =
               link.getAttribute("href") === `#${entry.target.id}`;
 
+            link.classList.toggle("active", isCurrent);
+
             if (isCurrent) {
-              link.classList.add("active");
               link.setAttribute("aria-current", "location");
             } else {
-              link.classList.remove("active");
               link.removeAttribute("aria-current");
             }
           });
@@ -89,6 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => {
+      sectionObserver.observe(section);
+    });
   }
 });
