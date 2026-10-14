@@ -1,446 +1,522 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="Md. Nayim Howlader — Data Analyst, Statistics professional and Machine Learning practitioner.">
+  <title>Md. Nayim Howlader | Data Analyst & Data Science</title>
+  <meta name="description" content="Explore the portfolio of Md. Nayim Howlader, a Statistics professional and Data Analyst working with Python, SQL, statistical modeling, and machine learning.">
+  <meta name="theme-color" content="#0b1020">
 
-  <meta name="theme-color" content="#0b1220">
+  <meta property="og:title" content="Md. Nayim Howlader | Data Science Portfolio">
+  <meta property="og:description" content="Data analytics, statistical modeling, and machine learning projects.">
+  <meta property="og:type" content="website">
 
-  <title>Md. Nayim Howlader | Data Portfolio</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
 
-  <link rel="stylesheet" href="styles.css">
-
-  <script src="script.js" defer></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Navigation -->
-  <header class="header">
-    <nav class="nav container">
-      <a class="logo" href="#home">NH<span>.</span></a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Nayim, home">
+        NH<span class="brand-dot">.</span>
+      </a>
 
-      <button class="menu-toggle" id="menuToggle"
-              aria-label="Toggle navigation"
-              aria-expanded="false">
-        ☰
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span><span></span>
       </button>
 
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#expertise">Expertise</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
+        <a class="nav-cta" href="resume.pdf" target="_blank" rel="noopener">
+          View Resume <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </nav>
   </header>
 
-  <main>
-
-    <!-- Hero -->
-    <section class="hero container" id="home">
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero section container" id="home">
       <div class="hero-content">
-        <p class="eyebrow">DATA ANALYTICS · STATISTICS · ML</p>
+        <p class="eyebrow">
+          <span class="status-dot"></span>
+          STATISTICS · ANALYTICS · MACHINE LEARNING
+        </p>
 
         <h1>
-          Hi, I'm <span>Md. Nayim Howlader</span>
+          Turning data into
+          <span class="gradient-text">meaningful decisions.</span>
         </h1>
 
-        <h2>Data Analyst &amp; Statistics Professional</h2>
-
         <p class="hero-description">
-          I work with data analysis, statistical modeling, and machine
-          learning to discover patterns, generate insights, and support
-          data-driven decisions.
+          I'm <strong>Md. Nayim Howlader</strong>, a Statistics professional
+          and Data Analyst with experience in data analysis, statistical
+          modeling, and predictive analytics. I use Python, SQL, and
+          machine learning techniques to explore data and develop
+          practical, evidence-driven solutions.
         </p>
 
-        <div class="hero-buttons">
-          <a class="button primary" href="#projects">Explore Projects ↗</a>
-
-          <!-- Place your CV PDF in this same folder -->
-          <a class="button secondary" href="resume.pdf" download>
-            Download Resume ↓
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">
+            Explore My Work <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-secondary" href="resume.pdf" download>
+            <span aria-hidden="true">↓</span> Download Resume
           </a>
         </div>
 
-        <div class="social-links">
+        <div class="hero-socials">
           <a href="https://github.com/YOUR_GITHUB_USERNAME"
-             target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-
+             target="_blank" rel="noopener">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/"
-             target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-
-          <a href="mailto:YOUR_EMAIL@example.com">Email ↗</a>
+             target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="#contact">Get in touch ↘</a>
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="card-label">MY ANALYTICAL TOOLKIT</div>
+      <aside class="hero-panel" aria-label="Professional focus">
+        <div class="panel-top">
+          <span class="panel-indicator"></span>
+          <span>ANALYTICAL TOOLKIT</span>
+          <span class="panel-menu">•••</span>
+        </div>
 
-        <div class="chart-icon">∿</div>
+        <div class="panel-heading">
+          <span class="panel-label">CORE FOCUS</span>
+          <h2>Data to insight.</h2>
+          <p>From exploration to model evaluation.</p>
+        </div>
 
-        <h3>From Data to Decisions</h3>
-        <p>Explore · Analyze · Model · Evaluate</p>
-
-        <div class="skill-bars">
-          <div>
-            <span>Python &amp; SQL</span>
-            <div class="bar"><i style="width: 85%"></i></div>
+        <div class="workflow">
+          <div class="workflow-step">
+            <span class="step-number">01</span>
+            <div><strong>Explore</strong><small>EDA · Data quality</small></div>
+            <span class="step-mark">↗</span>
           </div>
-          <div>
-            <span>Statistics</span>
-            <div class="bar"><i style="width: 90%"></i></div>
+          <div class="workflow-step">
+            <span class="step-number">02</span>
+            <div><strong>Analyze</strong><small>Statistics · SQL</small></div>
+            <span class="step-mark">↗</span>
           </div>
-          <div>
-            <span>Machine Learning</span>
-            <div class="bar"><i style="width: 70%"></i></div>
+          <div class="workflow-step">
+            <span class="step-number">03</span>
+            <div><strong>Model</strong><small>ML · Validation</small></div>
+            <span class="step-mark">↗</span>
+          </div>
+          <div class="workflow-step">
+            <span class="step-number">04</span>
+            <div><strong>Communicate</strong><small>Insights · Decisions</small></div>
+            <span class="step-mark">↗</span>
           </div>
         </div>
 
-        <p class="small-note">
-          Illustrative visual only — proficiency bars are editable.
-        </p>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section container" id="about">
-      <p class="section-label">01 / ABOUT ME</p>
-      <h2 class="section-title">Turning data into <span>insights.</span></h2>
-
-      <div class="about-grid">
-        <div>
-          <p class="large-text">
-            A Statistics professional passionate about analytical thinking,
-            practical problem-solving, and machine learning.
-          </p>
+        <div class="panel-footer">
+          <span>PYTHON</span><span>SQL</span><span>SCIKIT-LEARN</span>
         </div>
+      </aside>
 
-        <div class="muted-text">
-          <p>
-            I have experience working with Python, SQL, data cleaning,
-            exploratory data analysis, statistical modeling, and
-            visualization. My Statistics background helps me approach
-            problems with a focus on evidence, methodology, and interpretation.
-          </p>
-
-          <p>
-            I am developing end-to-end Data Science skills through practical
-            projects, with interests in financial data, risk analysis,
-            predictive modeling, and responsible AI.
-          </p>
-
-          <div class="fact-grid">
-            <div>
-              <span>BACKGROUND</span>
-              <strong>Statistics</strong>
-            </div>
-            <div>
-              <span>CAREER FOCUS</span>
-              <strong>Data Science</strong>
-            </div>
-            <div>
-              <span>LOCATION</span>
-              <strong>Bangladesh</strong>
-            </div>
-          </div>
-        </div>
+      <div class="hero-bottom-note">
+        <span>BASED ON STATISTICAL THINKING</span>
+        <a href="#about">SCROLL TO DISCOVER ↓</a>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section class="section section-alt" id="skills">
+    <!-- ABOUT -->
+    <section class="section section-border" id="about">
       <div class="container">
-        <p class="section-label">02 / TECHNICAL SKILLS</p>
-        <h2 class="section-title">My <span>toolkit.</span></h2>
+        <div class="section-heading">
+          <p class="eyebrow">01 / ABOUT</p>
+          <h2>Analytical thinking.<br><span class="muted">Practical outcomes.</span></h2>
+        </div>
 
-        <div class="card-grid">
+        <div class="about-grid">
+          <div class="about-copy">
+            <p class="lead">
+              I combine a foundation in Statistics with hands-on
+              analytical experience to investigate data, identify patterns,
+              and support data-informed decisions.
+            </p>
+            <p>
+              My work spans exploratory data analysis, statistical
+              decision-making, regression, predictive modeling, and
+              analysis of cross-sectional and time-series data. I use
+              Python and SQL to build reproducible workflows and
+              communicate findings clearly.
+            </p>
+            <p>
+              I am continuing to develop end-to-end data science and
+              machine learning projects, with a focus on sound evaluation,
+              transparent methodology, and practical use cases.
+            </p>
+          </div>
 
-          <article class="info-card">
-            <div class="card-icon">⌘</div>
-            <h3>Programming &amp; Data</h3>
+          <div class="about-facts">
+            <div class="fact-card">
+              <span class="fact-index">A</span>
+              <div><h3>Statistical foundation</h3><p>Reasoning, analysis, and interpretation.</p></div>
+            </div>
+            <div class="fact-card">
+              <span class="fact-index">B</span>
+              <div><h3>Data-first approach</h3><p>Quality checks, exploration, and reproducibility.</p></div>
+            </div>
+            <div class="fact-card">
+              <span class="fact-index">C</span>
+              <div><h3>Model evaluation</h3><p>Metrics, validation, and honest limitations.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section section-border" id="expertise">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">02 / EXPERTISE</p>
+          <h2>Tools I use to <span class="gradient-text">work with data.</span></h2>
+          <p class="section-intro">
+            A practical toolkit spanning data preparation, statistical
+            analysis, visualization, and machine learning.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <span class="card-index">01</span>
+            <h3>Programming & Data</h3>
+            <p>Working with structured data and repeatable analysis.</p>
             <div class="tags">
-              <span>Python</span>
-              <span>SQL</span>
-              <span>Pandas</span>
-              <span>NumPy</span>
-              <span>Jupyter Notebook</span>
+              <span>Python</span><span>SQL</span><span>Pandas</span>
+              <span>NumPy</span><span>Jupyter</span>
             </div>
           </article>
 
-          <article class="info-card">
-            <div class="card-icon">∑</div>
-            <h3>Statistics &amp; Analytics</h3>
+          <article class="skill-card">
+            <span class="card-index">02</span>
+            <h3>Statistics & Analytics</h3>
+            <p>Investigating patterns, relationships, and uncertainty.</p>
             <div class="tags">
-              <span>EDA</span>
-              <span>Statistical Modeling</span>
-              <span>Hypothesis Testing</span>
-              <span>Time Series</span>
-              <span>Data Cleaning</span>
+              <span>EDA</span><span>Statistical Analysis</span>
+              <span>Regression</span><span>Time Series</span>
+              <span>Cross-sectional Data</span>
             </div>
           </article>
 
-          <article class="info-card">
-            <div class="card-icon">⌁</div>
+          <article class="skill-card">
+            <span class="card-index">03</span>
+            <h3>Visualization</h3>
+            <p>Making analytical findings easier to understand.</p>
+            <div class="tags">
+              <span>Matplotlib</span><span>Seaborn</span>
+              <span>Plotly</span><span>Data Storytelling</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <span class="card-index">04</span>
             <h3>Machine Learning</h3>
+            <p>Developing and evaluating predictive models.</p>
             <div class="tags">
-              <span>Scikit-learn</span>
-              <span>Regression</span>
-              <span>Classification</span>
+              <span>Scikit-learn</span><span>Classification</span>
+              <span>Regression</span><span>Model Evaluation</span>
               <span>Feature Engineering</span>
-              <span>Model Evaluation</span>
             </div>
           </article>
-
-          <article class="info-card">
-            <div class="card-icon">▥</div>
-            <h3>Visualization &amp; Tools</h3>
-            <div class="tags">
-              <span>Matplotlib</span>
-              <span>Seaborn</span>
-              <span>Plotly</span>
-              <span>Git &amp; GitHub</span>
-              <span>[Add other tools]</span>
-            </div>
-          </article>
-
         </div>
+
+        <p class="skills-note">
+          Tools and methods shown here reflect my current working toolkit.
+          I continue to expand my capabilities through practical projects.
+        </p>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section class="section container" id="experience">
-      <p class="section-label">03 / EXPERIENCE</p>
-      <h2 class="section-title">Professional <span>experience.</span></h2>
-
-      <article class="experience-card">
-        <div class="experience-top">
-          <div>
-            <h3>Junior Data Analyst &amp; Consultant</h3>
-            <p class="muted-text">[Company Name]</p>
-          </div>
-
-          <span class="date-badge">[Start Date – End Date]</span>
-        </div>
-
-        <ul class="experience-list">
-          <li>
-            Used SQL and Python libraries, including Pandas and NumPy,
-            to analyze and prepare datasets.
-          </li>
-          <li>
-            Performed exploratory data analysis and visualization to
-            identify patterns and trends.
-          </li>
-          <li>
-            Applied statistical techniques and machine learning models
-            to support analytical tasks.
-          </li>
-          <li>
-            Worked with time-series and cross-sectional data.
-          </li>
-        </ul>
-
-        <p class="edit-note">
-          Replace the company, dates, and responsibilities with your verified
-          employment details.
-        </p>
-      </article>
-
-      <!-- Duplicate the article above if you have another relevant role -->
-    </section>
-
-    <!-- Projects -->
-    <section class="section section-alt" id="projects">
+    <!-- EXPERIENCE -->
+    <section class="section section-border" id="experience">
       <div class="container">
-        <p class="section-label">04 / PORTFOLIO</p>
-        <h2 class="section-title">Featured <span>projects.</span></h2>
-
-        <p class="section-intro">
-          Selected projects demonstrating data analysis, statistical thinking,
-          and machine learning workflows.
-        </p>
-
-        <div class="project-grid">
-
-          <article class="project-card">
-            <div class="project-number">PROJECT 01 · NLP</div>
-            <h3>FinGuard AI</h3>
-            <p class="project-subtitle">
-              Financial Document Intelligence &amp; Compliance Risk Analysis
-            </p>
-            <p>
-              A financial text analytics project exploring complaint narratives,
-              dataset quality, text classification, and responsible model
-              evaluation.
-            </p>
-            <div class="tags">
-              <span>Python</span>
-              <span>NLP</span>
-              <span>Scikit-learn</span>
-            </div>
-            <a class="project-link"
-               href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_FINGUARD_REPO"
-               target="_blank" rel="noopener noreferrer">
-              GitHub Repository ↗
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-number">PROJECT 02 · CLASSIFICATION</div>
-            <h3>Customer Fraud Detection</h3>
-            <p class="project-subtitle">Machine Learning &amp; Risk Analysis</p>
-            <p>
-              A classification workflow for identifying potentially fraudulent
-              transactions, examining class imbalance, and evaluating model
-              performance using precision, recall, and F1-score.
-            </p>
-            <div class="tags">
-              <span>Python</span>
-              <span>Classification</span>
-              <span>Model Evaluation</span>
-            </div>
-            <a class="project-link"
-               href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_FRAUD_REPO"
-               target="_blank" rel="noopener noreferrer">
-              GitHub Repository ↗
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-number">PROJECT 03 · FORECASTING</div>
-            <h3>Sales Demand Forecasting</h3>
-            <p class="project-subtitle">Time-Series Analysis</p>
-            <p>
-              Analyze historical sales patterns, establish forecasting
-              baselines, and compare predictions using time-aware validation.
-            </p>
-            <div class="tags">
-              <span>Time Series</span>
-              <span>Python</span>
-              <span>Visualization</span>
-            </div>
-            <a class="project-link"
-               href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_FORECAST_REPO"
-               target="_blank" rel="noopener noreferrer">
-              GitHub Repository ↗
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-number">PROJECT 04 · ADD YOUR OWN</div>
-            <h3>[Your Next Project]</h3>
-            <p class="project-subtitle">[Project Category]</p>
-            <p>
-              Add the problem statement, dataset, methods, evaluation results,
-              and practical findings from another completed project.
-            </p>
-            <div class="tags">
-              <span>[Technology]</span>
-              <span>[Method]</span>
-            </div>
-            <a class="project-link"
-               href="https://github.com/YOUR_GITHUB_USERNAME"
-               target="_blank" rel="noopener noreferrer">
-              Explore GitHub ↗
-            </a>
-          </article>
-
+        <div class="section-heading">
+          <p class="eyebrow">03 / EXPERIENCE</p>
+          <h2>Experience built around <span class="muted">analysis.</span></h2>
         </div>
 
-        <p class="edit-note">
-          Important: Update project descriptions and repository links to match
-          the work actually completed. Do not publish invented performance
-          metrics.
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-meta">
+              <span>YOUR START DATE — YOUR END DATE</span>
+              <span class="timeline-type">PROFESSIONAL EXPERIENCE</span>
+            </div>
+            <h3>Junior Data Analyst & Consultant</h3>
+            <p class="company">YOUR COMPANY NAME</p>
+            <p>
+              Worked with structured datasets to support data analysis,
+              statistical decision-making, and predictive modeling tasks.
+            </p>
+            <ul class="detail-list">
+              <li>Used SQL and Python libraries including Pandas and NumPy to prepare and analyze data.</li>
+              <li>Performed exploratory analysis and created visualizations using Matplotlib, Seaborn, and Plotly.</li>
+              <li>Applied regression and selected machine learning techniques using Scikit-learn.</li>
+              <li>Worked with cross-sectional and time-series data to investigate patterns and support analytical conclusions.</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span><span>SQL</span><span>EDA</span>
+              <span>Statistics</span><span>Scikit-learn</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="section-footnote">
+          Replace the date range, employer name, and responsibilities with
+          details that accurately match your employment history.
         </p>
       </div>
     </section>
 
-    <!-- Education -->
-    <section class="section container" id="education">
-      <p class="section-label">05 / EDUCATION</p>
-      <h2 class="section-title">Academic <span>background.</span></h2>
-
-      <article class="education-card">
-        <div class="card-icon">▤</div>
-        <div>
-          <h3>BSc (Honours) in Statistics</h3>
-          <p class="muted-text">Department of Statistics</p>
-          <p>[University Name]</p>
-          <p class="muted-text">[Start Year – Completion / Expected Year]</p>
-          <p class="edit-note">
-            Add your official university name and dates. Mark the degree as
-            completed only when it has been officially awarded.
+    <!-- PROJECTS -->
+    <section class="section section-border" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 / SELECTED WORK</p>
+          <h2>Projects with a <span class="gradient-text">purpose.</span></h2>
+          <p class="section-intro">
+            Applied data projects designed to demonstrate analytical
+            reasoning, modeling workflow, and transparent evaluation.
           </p>
         </div>
-      </article>
+
+        <div class="projects-grid">
+          <article class="project-card project-featured">
+            <div class="project-visual visual-finance">
+              <div class="visual-caption">NLP / FINANCIAL DOCUMENTS</div>
+              <div class="visual-chart">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="visual-label">DOCUMENT INTELLIGENCE</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span>01</span><span>IN DEVELOPMENT</span></div>
+              <h3>FinGuard AI</h3>
+              <p class="project-subtitle">
+                Financial Document Intelligence & Compliance Risk Analysis
+              </p>
+              <p>
+                A document-analysis project exploring financial complaint
+                narratives and compliance-related text workflows. The
+                current direction emphasizes dataset validation,
+                text classification, and transparent evaluation.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>NLP</span><span>Pandas</span>
+                <span>Scikit-learn</span><span>Text Classification</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/finguard-ai"
+                   target="_blank" rel="noopener">Repository ↗</a>
+                <span class="project-status">Metrics to be added after validation</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual visual-fraud">
+              <div class="visual-caption">CLASSIFICATION / RISK ANALYSIS</div>
+              <div class="fraud-orbit">
+                <div class="orbit-ring ring-one"></div>
+                <div class="orbit-ring ring-two"></div>
+                <div class="orbit-core">RISK<br>ANALYSIS</div>
+                <span class="orbit-node node-one"></span>
+                <span class="orbit-node node-two"></span>
+                <span class="orbit-node node-three"></span>
+              </div>
+              <div class="visual-label">FRAUD DETECTION</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span>02</span><span>IN DEVELOPMENT</span></div>
+              <h3>Customer Fraud Detection</h3>
+              <p>
+                A planned machine learning workflow for identifying
+                suspicious transaction patterns, handling class imbalance,
+                and comparing classification models using suitable metrics.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>EDA</span><span>Classification</span>
+                <span>Precision / Recall</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/customer-fraud-detection"
+                   target="_blank" rel="noopener">Repository ↗</a>
+                <span class="project-status">Results pending</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual visual-forecast">
+              <div class="visual-caption">TIME SERIES / FORECASTING</div>
+              <svg class="forecast-svg" viewBox="0 0 420 170"
+                   role="img" aria-label="Decorative upward and fluctuating time-series line">
+                <defs>
+                  <pattern id="chartGrid" width="42" height="34" patternUnits="userSpaceOnUse">
+                    <path d="M 42 0 L 0 0 0 34" fill="none" stroke="currentColor" stroke-opacity=".15"/>
+                  </pattern>
+                </defs>
+                <rect width="420" height="170" fill="url(#chartGrid)"/>
+                <path d="M0 132 L35 114 L66 124 L100 78 L135 92 L166 65 L198 86 L230 43 L266 60 L299 34 L330 49 L370 18 L420 28"
+                      fill="none" stroke="#72E0D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M299 34 L330 49 L370 18 L420 28"
+                      fill="none" stroke="#91A6FF" stroke-width="3" stroke-dasharray="6 6"/>
+              </svg>
+              <div class="visual-label">DEMAND FORECASTING</div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span>03</span><span>PLANNED PROJECT</span></div>
+              <h3>Sales Demand Forecasting</h3>
+              <p>
+                A time-series analysis project focused on understanding
+                historical sales behavior, building forecasting baselines,
+                and evaluating out-of-sample prediction performance.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>Time Series</span>
+                <span>Forecasting</span><span>Model Evaluation</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/sales-demand-forecasting"
+                   target="_blank" rel="noopener">Repository ↗</a>
+                <span class="project-status">Results pending</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-footer">
+          <p>Every published project should include reproducible steps, data provenance, evaluation methodology, and known limitations.</p>
+          <a class="text-link"
+             href="https://github.com/YOUR_GITHUB_USERNAME?tab=repositories"
+             target="_blank" rel="noopener">Explore all repositories ↗</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Certifications -->
-    <section class="section section-alt" id="certifications">
+    <!-- EDUCATION -->
+    <section class="section section-border" id="education">
       <div class="container">
-        <p class="section-label">06 / CERTIFICATIONS &amp; TRAINING</p>
-        <h2 class="section-title">Continuous <span>learning.</span></h2>
+        <div class="section-heading">
+          <p class="eyebrow">05 / EDUCATION & DEVELOPMENT</p>
+          <h2>Learning through <span class="muted">statistics and practice.</span></h2>
+        </div>
 
-        <article class="education-card">
-          <div class="card-icon">✓</div>
-          <div>
-            <h3>Data Science and Machine Learning with Python</h3>
-            <p class="muted-text">Ostad</p>
-            <p>Course completed</p>
-            <p class="edit-note">
-              Add your completion date and certificate link if available.
-              Add other certifications only after earning them.
+        <div class="education-grid">
+          <article class="education-card">
+            <span class="education-icon" aria-hidden="true">∑</span>
+            <p class="eyebrow">ACADEMIC BACKGROUND</p>
+            <h3>BSc (Honours) in Statistics</h3>
+            <p class="company">YOUR UNIVERSITY NAME</p>
+            <p>
+              Academic foundation in statistical concepts, quantitative
+              reasoning, data analysis, and interpreting evidence.
             </p>
-          </div>
-        </article>
-      </div>
-    </section>
+            <span class="education-date">YOUR STUDY PERIOD</span>
+          </article>
 
-    <!-- Contact -->
-    <section class="section container" id="contact">
-      <div class="contact-box">
-        <p class="section-label">07 / CONTACT</p>
-        <h2>Let's talk about <span>data.</span></h2>
-        <p>
-          Interested in Data Analyst opportunities, Data Science projects,
-          collaboration, or data-driven problem-solving? Feel free to connect.
+          <article class="education-card">
+            <span class="education-icon" aria-hidden="true">⌘</span>
+            <p class="eyebrow">PROFESSIONAL DEVELOPMENT</p>
+            <h3>Data Science and Machine Learning with Python</h3>
+            <p class="company">Ostad</p>
+            <p>
+              Practical learning in Python-based data science and machine
+              learning workflows.
+            </p>
+            <span class="education-date">COMPLETED</span>
+          </article>
+        </div>
+
+        <p class="section-footnote">
+          Add only certifications you have completed and can verify.
+          If your degree certificate has not yet been issued, describe
+          the academic status accurately.
         </p>
+      </div>
+    </section>
 
-        <div class="hero-buttons">
-          <a class="button primary" href="mailto:YOUR_EMAIL@example.com">
-            Email Me ↗
-          </a>
-          <a class="button secondary"
-             href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/"
-             target="_blank" rel="noopener noreferrer">
-            LinkedIn ↗
-          </a>
-        </div>
-
-        <div class="contact-details">
-          <p><strong>Email:</strong> YOUR_EMAIL@example.com</p>
-          <p><strong>Location:</strong> Bangladesh</p>
-          <p><strong>Availability:</strong> [Edit your current availability]</p>
+    <!-- WORK APPROACH -->
+    <section class="section section-border" id="approach">
+      <div class="container approach-panel">
+        <p class="eyebrow">MY APPROACH</p>
+        <h2>Good analysis is more than a model.</h2>
+        <div class="approach-grid">
+          <div><span>01</span><h3>Understand</h3><p>Clarify the question, context, and success criteria.</p></div>
+          <div><span>02</span><h3>Validate</h3><p>Check data quality, assumptions, and potential leakage.</p></div>
+          <div><span>03</span><h3>Evaluate</h3><p>Use appropriate baselines, metrics, and validation methods.</p></div>
+          <div><span>04</span><h3>Communicate</h3><p>Explain findings, limitations, and next steps clearly.</p></div>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
+    <section class="section section-border" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">06 / CONTACT</p>
+          <h2>Let's talk about <span class="gradient-text">data.</span></h2>
+          <p class="contact-description">
+            I welcome conversations about data analytics, machine learning,
+            analytical problem-solving, and relevant professional opportunities.
+          </p>
+          <a class="button button-primary"
+             href="mailto:YOUR_EMAIL@example.com">
+            Email Me <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:YOUR_EMAIL@example.com">
+            <span>Email</span><strong>YOUR_EMAIL@example.com ↗</strong>
+          </a>
+          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/"
+             target="_blank" rel="noopener">
+            <span>LinkedIn</span><strong>Professional profile ↗</strong>
+          </a>
+          <a href="https://github.com/YOUR_GITHUB_USERNAME"
+             target="_blank" rel="noopener">
+            <span>GitHub</span><strong>Code & projects ↗</strong>
+          </a>
+          <div class="contact-static">
+            <span>Location</span><strong>Bangladesh · Open to relevant opportunities</strong>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="logo" href="#home">NH<span>.</span></a>
-      <p>Built with HTML, CSS &amp; JavaScript.</p>
-      <p>© <span id="year"></span> Md. Nayim Howlader</p>
+      <a class="brand" href="#home">NH<span class="brand-dot">.</span></a>
+      <p>Built with purpose, curiosity, and data.</p>
+      <p>© <span id="currentYear"></span> Md. Nayim Howlader</p>
     </div>
   </footer>
-
 </body>
 </html>
