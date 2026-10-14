@@ -1,59 +1,94 @@
-// Mobile navigation
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("open");
+"use strict";
 
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.textContent = isOpen ? "✕" : "☰";
-    menuToggle.setAttribute(
-      "aria-label",
-      isOpen ? "Close navigation" : "Open navigation"
-    );
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+  const currentYear = document.getElementById("currentYear");
 
-  // Close the menu after selecting a section
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.textContent = "☰";
-      menuToggle.setAttribute("aria-label", "Toggle navigation");
+  // Automatic copyright year
+  if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+  }
+
+  // Accessible mobile navigation
+  if (navToggle && navLinks) {
+    const closeMenu = () => {
+      navLinks.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation");
+    };
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("is-open");
+
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      navToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
     });
-  });
-}
 
-// Automatically update copyright year
-const yearElement = document.getElementById("year");
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
 
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        navToggle.focus();
+      }
+    });
 
-// Highlight navigation link for the current section
-const sections = document.querySelectorAll("main section[id]");
-const navItems = document.querySelectorAll(".nav-links a[href^='#']");
+    document.addEventListener("click", (event) => {
+      if (
+        navLinks.classList.contains("is-open") &&
+        !navLinks.contains(event.target) &&
+        !navToggle.contains(event.target)
+      ) {
+        closeMenu();
+      }
+    });
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((link) => {
-            const isActive =
-              link.getAttribute("href") === `#${entry.target.id}`;
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 760) {
+        closeMenu();
+      }
+    });
+  }
 
-            link.classList.toggle("active", isActive);
-          });
-        }
-      });
-    },
-    {
-      rootMargin: "-25% 0px -65% 0px"
-    }
+  // Highlight the current section in navigation
+  const sections = document.querySelectorAll("main section[id]");
+  const sectionLinks = document.querySelectorAll(
+    '.nav-links a[href^="#"]'
   );
 
-  sections.forEach((section) => observer.observe(section));
-}
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          sectionLinks.forEach((link) => {
+            const isCurrent =
+              link.getAttribute("href") === `#${entry.target.id}`;
+
+            if (isCurrent) {
+              link.classList.add("active");
+              link.setAttribute("aria-current", "location");
+            } else {
+              link.classList.remove("active");
+              link.removeAttribute("aria-current");
+            }
+          });
+        });
+      },
+      {
+        rootMargin: "-25% 0px -60% 0px",
+        threshold: 0
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  }
+});
